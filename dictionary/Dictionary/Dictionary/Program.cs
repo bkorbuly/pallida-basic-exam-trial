@@ -18,11 +18,8 @@ namespace Dictionary
                 { "fa", "tree" }
             };
             AddWord("auto", "car");
-            foreach (KeyValuePair<string, string> words in Dictionary)
-            {
-                Console.WriteLine("{0}, {1}", words.Key, words.Value);
-            }
-            RemoveWord("auto");
+            TranslateToEnglish("auto");
+            //RemoveWord("auto");
             foreach (KeyValuePair<string, string> words in Dictionary)
             {
                 Console.WriteLine("{0}, {1}", words.Key, words.Value);
@@ -37,6 +34,14 @@ namespace Dictionary
         {
             Dictionary.Remove(hungarianWord);
         }
-
+        public static void TranslateToEnglish(string hungarian)
+        {
+            string value;
+            if (Dictionary.ContainsKey(hungarian))
+            {
+                value = Dictionary[hungarian];
+                Console.WriteLine(value);
+            }
+        }
     }
 }
