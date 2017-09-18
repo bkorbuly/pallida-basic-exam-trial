@@ -17,14 +17,19 @@ namespace Dictionary
                 { "alma", "apple" },
                 { "fa", "tree" }
             };
-            //AddWord("auto", "car");
-            //TranslateToEnglish(Console.ReadLine());
-            //RemoveWord("auto");
+
+            AddWord("auto", "car");
+            TranslateToEnglish(Console.ReadLine());
+            RemoveWord("auto");
+
             foreach (KeyValuePair<string, string> words in Dictionary)
             {
                 Console.WriteLine("{0}, {1}", words.Key, words.Value);
+
             }
+
             TranslateToHungarian(Console.ReadLine());
+
             Console.ReadLine();
         }
         public static void AddWord(string hungarianWord, string englishWord)
@@ -59,7 +64,6 @@ namespace Dictionary
             {
                 Console.WriteLine("Unknown word or It is not exist in the dictionary");
             }
-
 
         }
     }
