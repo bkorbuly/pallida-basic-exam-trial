@@ -33,4 +33,4 @@ The application is accepted if:
 
 ###  What is the difference between id and class in CSS? [2p]
 #### Your answer: 
-[add your answer here]
+Id is uniq. It belongs only to one element. Class is not uniq.It can be used to multiple elements.
