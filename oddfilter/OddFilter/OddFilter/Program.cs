@@ -11,6 +11,8 @@ namespace OddFilter
         static void Main(string[] args)
         {
             List<int> oddElements = OddFilter(new List<int> { 1, 2, 3, 4, 5 });
+
+            PrintList(oddElements);
             
             Console.ReadLine();
         }
