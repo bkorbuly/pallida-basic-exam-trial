@@ -16,12 +16,14 @@ namespace NameFromEmail
 
         private static string NameFromEmail(string email)
         {
-            string firstname, lastname;
-            firstname = " ";
-            lastname = "";
+            return  Lastname(email) + Firstname(email);       
+        }
+        public static string Lastname(string email)
+        {
+            string lastname = "";
             for (int i = email.IndexOf(".") + 1; i < email.IndexOf("@"); i++)
             {
-                if(i == email.IndexOf(".") + 1)
+                if (i == email.IndexOf(".") + 1)
                 {
                     lastname = lastname + Char.ToUpper(email[i]);
                 }
@@ -29,10 +31,14 @@ namespace NameFromEmail
                 {
                     lastname = lastname + email[i];
                 }
-               
             }
+            return lastname;
 
-            for (int i = 0 ; i < email.IndexOf("."); i++)
+        }
+        public static string Firstname(string email)
+        {
+            string firstname = " ";
+            for (int i = 0; i < email.IndexOf("."); i++)
             {
                 if (i == 0)
                 {
@@ -43,8 +49,7 @@ namespace NameFromEmail
                     firstname = firstname + email[i];
                 }
             }
-
-            return lastname + firstname;
+            return firstname;
         }
     }
 }
